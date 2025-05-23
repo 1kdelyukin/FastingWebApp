@@ -1,0 +1,300 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use App\Models\Recipe;
+
+class RecipesSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     */
+    public function run(): void
+    {
+        $recipes = [
+            [
+                'name'        => 'Lemon Turmeric Tea',
+                'cover_image' => 'images/recipes/lemon_turmeric_tea_cover.png',
+                'image'       => 'images/recipes/lemon_turmeric_tea.png',
+                'anti_inflammatory' => true,
+                'serves'      => "4",
+                'ingredients' => [
+                    '6 cups water',
+                    '½ lemon, roughly chopped (including rind)',
+                    '1‑inch piece fresh ginger root, roughly chopped',
+                    'Dash of cinnamon',
+                    'Dash of turmeric',
+                    '1–2 tbsp pure maple syrup',
+                ],
+                'directions'  => [
+                    'Add all ingredients to a large pot. Bring to a boil and simmer for 10 minutes.',
+                    'Remove from heat, strain, and pour into a large glass jar.',
+                    'Chill overnight and enjoy! Can also be served warm.',
+                ],
+                'page_slug'   => 'lemon-turmeric-tea',
+            ],
+            [
+                'name'        => 'Turkey Burger',
+                'cover_image' => 'images/recipes/turkey_burger_cover.png',
+                'image'       => 'images/recipes/turkey_burger.png',
+                'anti_inflammatory' => true,
+                'serves'      => "4",
+                'ingredients' => [
+                    '1 lb ground turkey',
+                    '1½ teaspoons olive oil',
+                    '1 garlic clove, minced',
+                    'Pinch of cayenne pepper',
+                    '1 tablespoon ground flax seeds',
+                    '½ cup parsley, chopped',
+                    '2 large eggs',
+                    'Sea salt and pepper',
+                ],
+                'directions'  => [
+                    'Mix together turkey, olive oil, garlic, flax seeds, parsley, eggs, and pepper.',
+                    'Gently form 4 patties.',
+                    'Grill the burgers.',
+                    'Serve on top of a bed of lettuce.',
+                ],
+                'page_slug'   => 'turkey-burger',
+            ],
+            [
+                'name'        => 'Squash Soup',
+                'cover_image' => 'images/recipes/squash_soup_cover.png',
+                'image'       => 'images/recipes/squash_soup.png',
+                'anti_inflammatory' => true,
+                'serves'      => "4-5",
+                'ingredients' => [
+                    '1 large sweet potato',
+                    '1 small summer squash, peeled and cubed',
+                    '2 carrots, peeled and thinly sliced',
+                    '1‑inch piece ginger root, peeled and sliced',
+                    '1 pinch curry powder',
+                    '1 pinch turmeric',
+                    '6 cups vegetable stock',
+                    '1 pear, peeled and sliced',
+                    '1 apple, peeled and sliced',
+                    '2 large onions, chopped',
+                    '2 tablespoons extra virgin olive oil',
+                    '3 tablespoons apple juice',
+                    '1 teaspoon sea salt',
+                    'Cottage cheese or goat cheese (for garnish)',
+                ],
+                'directions'  => [
+                    'Place the sweet potato, squash, carrots, ginger, curry, and turmeric in a large saucepan.',
+                    'Add the vegetable stock, cover, and gently bring to a boil.',
+                    'Reduce heat and simmer for about 30 minutes or until the vegetables are soft.',
+                    'In a separate saucepan, cook the pear, apple, onions, olive oil, and apple juice over medium heat for 5–10 minutes until soft.',
+                    'Add the cooked pear and apple mixture and salt to the first saucepan and mix well.',
+                    'Once thoroughly cooked, puree the mixture using a food processor or blender.',
+                    'Serve topped with about a tablespoon of cottage or goat cheese.',
+                ],
+                'page_slug'   => 'squash-soup',
+            ],
+            [
+                'name'        => 'Spinach Hummus Spread',
+                'cover_image' => 'images/recipes/spinach_hummus_spread.png',
+                'image'       => 'images/recipes/spinach_hummus_spread.png',
+                'anti_inflammatory' => true,
+                'serves'      => "1",
+                'ingredients' => [
+                    '4 cups spinach',
+                    '1 can Eden Organics (pressure cooked) chick peas',
+                    '¼ cup water',
+                    '¼ cup fresh parsley',
+                    '¼ cup fresh basil',
+                    'Juice of 2 lemons',
+                    '2 cloves garlic',
+                    '½ teaspoon salt',
+                ],
+                'directions'  => [
+                    'Place all ingredients in a food processor and puree until smooth.',
+                    'Serve with whole grain pita bread or sliced vegetables.',
+                ],
+                'page_slug'   => 'spinach-hummus-spread',
+            ],
+            [
+                'name'        => 'Steak with Grilled Vegetables',
+                'cover_image' => 'images/recipes/steak_grilled_vegetables_cover.png',
+                'image'       => 'images/recipes/steak_grilled_vegetables.png',
+                'anti_inflammatory' => true,
+                'serves'      => "2",
+                'ingredients' => [
+                    'Two 3‑ounce portions of lean grass‑fed steak (size of your palm)',
+                    '6 asparagus spears',
+                    '1 portobello mushroom',
+                    '2 teaspoons olive oil',
+                    '¼ cup goat cheese',
+                    'Basil leaves (for garnish)',
+                ],
+                'directions'  => [
+                    'Coat the vegetables with olive oil and grill on the BBQ or in the oven.',
+                    'Grill the steak to your desired doneness.',
+                    'Plate the steak with the grilled vegetables, garnishing with basil and goat cheese.',
+                ],
+                'page_slug'   => 'steak-with-grilled-vegetables',
+            ],
+            [
+                'name'        => 'Bean Dip',
+                'cover_image' => 'images/recipes/bean_dip_cover.png',
+                'image'       => 'images/recipes/bean_dip.png',
+                'anti_inflammatory' => true,
+                'serves'      => "1",
+                'ingredients' => [
+                    '1 (15‑ounce) can Eden Organics black beans',
+                    '1½ teaspoons extra virgin olive oil',
+                    '1 teaspoon chili powder',
+                    '1 teaspoon dried oregano',
+                    '½ small onion, minced finely',
+                    '1 clove garlic, crushed',
+                    'Pinch of sea salt and fresh black pepper to taste',
+                ],
+                'directions'  => [
+                    'Blend the black beans and olive oil until a paste forms.',
+                    'Add the remaining ingredients and mix well.',
+                    'Transfer to a bowl and cover with plastic wrap.',
+                    'Serve with vegetables.',
+                ],
+                'page_slug'   => 'bean-dip',
+            ],
+            [
+                'name'        => 'Salmon Salad with Avocado',
+                'cover_image' => 'images/recipes/salmon_salad_avocado_cover.png',
+                'image'       => 'images/recipes/salmon_salad_avocado.png',
+                'anti_inflammatory' => true,
+                'serves'      => "1",
+                'ingredients' => [
+                    'Salmon (smoked / canned / grilled)',
+                    'A handful of spinach',
+                    '½ avocado, cut up',
+                ],
+                'directions'  => [
+                    'Place all ingredients into a salad bowl.',
+                    'Enjoy immediately.',
+                ],
+                'page_slug'   => 'salmon-salad-with-avocado',
+            ],
+            [
+                'name'        => 'Summer Bean Salad',
+                'cover_image' => 'images/recipes/summer_bean_salad_cover.png',
+                'image'       => 'images/recipes/summer_bean_salad.jpg',
+                'anti_inflammatory' => true,
+                'serves'      => "4",
+                'ingredients' => [
+                    '2 cups green beans, ends trimmed',
+                    '1 (15‑ounce) can Eden Organics chick peas, rinsed and drained',
+                    '1 (15‑ounce) can Eden Organics mixed beans, rinsed and drained',
+                    '1 small red onion, chopped',
+                    '2 cups arugula',
+                    '1 tablespoon ground cumin',
+                    '2 tablespoons olive oil',
+                ],
+                'directions'  => [
+                    'Bring a saucepan of salted water to a boil; add green beans and cook for 1–2 minutes.',
+                    'Drain the beans and refresh them in iced water until cool; then pat dry.',
+                    'In a bowl, combine the chick peas, mixed beans, green beans, red onion, and arugula.',
+                    'Toast the cumin in a dry pan until the seeds begin to brown, releasing the flavor.',
+                    'Stir the toasted cumin into the olive oil, mix well, and pour over the salad.',
+                ],
+                'page_slug'   => 'summer-bean-salad',
+            ],
+            [
+                'name'        => 'Chicken Stir‑Fry',
+                'cover_image' => 'images/recipes/chicken_stir_fry_cover.png',
+                'image'       => 'images/recipes/chicken_stir_fry.png',
+                'anti_inflammatory' => true,
+                'serves'      => "2",
+                'ingredients' => [
+                    '2 teaspoons extra virgin olive oil',
+                    '2 cups spinach',
+                    '1 small zucchini, chopped',
+                    '½ teaspoon cumin',
+                    'Pinch of turmeric',
+                    '1 small chili pepper, finely chopped',
+                    '¼ cup vegetable stock',
+                    '4 ounces boneless, skinless chicken breast, sliced',
+                ],
+                'directions'  => [
+                    'Heat olive oil over moderate heat in a large skillet or wok. Add zucchini, broccoli, and garlic.',
+                    'Cook until vegetables are tender; add spices and vegetable stock if needed.',
+                    'Stir in the chicken and cook for a few minutes until nearly done.',
+                    'Add spinach and cook until wilted and the chicken is fully cooked.',
+                ],
+                'page_slug'   => 'chicken-stir-fry',
+            ],
+            [
+                'name'        => 'Pureed Squash and Apple Soup',
+                'cover_image' => 'images/recipes/pureed_squash_apple_soup_cover.png',
+                'image'       => 'images/recipes/squash_soup.png',
+                'anti_inflammatory' => true,
+                'serves'      => "4",
+                'ingredients' => [
+                    '2 tablespoons extra virgin olive oil',
+                    '1 small onion, finely chopped',
+                    '1 apple, cored, peeled, and finely chopped (or 1 cup unsweetened applesauce)',
+                    '1 cup unsweetened apple cider',
+                    '1 teaspoon ground ginger',
+                    '1 teaspoon ground cinnamon',
+                    '3½ cups low sodium vegetable stock',
+                    '3 acorn squashes',
+                ],
+                'directions'  => [
+                    'Cut squashes in half, remove seeds, and bake in an oven at 400˚F (205˚C) until soft.',
+                    'In a large pot, heat olive oil and cook the onion until soft.',
+                    'Add the apple and apple cider; cook until the apple softens.',
+                    'Stir in ginger, cinnamon, and vegetable stock; bring to a boil.',
+                    'Add the baked squash and cook until heated through for about 8–10 minutes.',
+                    'Reduce heat and simmer until the soup thickens.',
+                    'Puree the mixture and season with salt.',
+                    'Serve in bowls; add Greek yogurt for garnish if desired.',
+                ],
+                'page_slug'   => 'pureed-squash-and-apple-soup',
+            ],
+            [
+                'name'        => 'Mediterranean Halibut',
+                'cover_image' => 'images/recipes/mediterranean_halibut_cover.png',
+                'image'       => 'images/recipes/mediterranean_halibut.png',
+                'anti_inflammatory' => true,
+                'serves'      => "2",
+                'ingredients' => [
+                    '2 halibut fillets',
+                    '1½ teaspoons extra virgin olive oil',
+                    '4 black pitted olives, sliced',
+                ],
+                'directions'  => [
+                    'Preheat the oven to 375˚F (190˚C).',
+                    'Place the halibut fillets in a small, shallow baking dish and brush with olive oil.',
+                    'Top with olives and bake until the fish flakes easily with a fork for about 10–20 minutes.',
+                    'Serve with a side salad tossed in balsamic vinegar and olive oil dressing.',
+                ],
+                'page_slug'   => 'mediterranean-halibut',
+            ],
+            [
+                'name'        => 'Roasted Asparagus',
+                'cover_image' => 'images/recipes/roasted_asparagus_cover.png',
+                'image'       => 'images/recipes/roasted_asparagus.png',
+                'anti_inflammatory' => true,
+                'serves'      => "4",
+                'ingredients' => [
+                    '1 bunch asparagus (firm and bright green)',
+                    '2 tablespoons butter',
+                    '1 clove garlic, crushed',
+                    'Sea salt, to taste',
+                ],
+                'directions'  => [
+                    'Preheat the oven to 425˚F (218˚C). Break off woody stems from the asparagus.',
+                    'Rinse well under running water.',
+                    'Toss the spears in a pan with butter and garlic.',
+                    'Season with salt and pepper.',
+                    'Bake for 6–10 minutes until tender.',
+                ],
+                'page_slug'   => 'roasted-asparagus',
+            ],
+        ];
+
+        foreach ($recipes as $item) {
+            Recipe::create($item);
+        }
+    }
+}
